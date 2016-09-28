@@ -14,7 +14,8 @@ var makePtag = function(country){
 var startGame = function(country){
   map.centerAt(country.latlng[0], country.latlng[1]);
   var pTag = makePtag(country);
-  document.body.appendChild(pTag);
+  var cluesDiv = document.querySelector("#clues")
+  cluesDiv.appendChild(pTag);
 }
 
 // var populateMarkers = function(countries){
