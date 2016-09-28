@@ -1,12 +1,16 @@
 var map;
 
+// var checkAnswer = function(answer, countryName){
+
+// }
+
 var makePtag = function(country){
   var pTag = document.createElement("div");
-  pTag.innerHTML = "<h4>Clue 1</h4>" + 
-  "<p>Native Name: " + country.nativeName +  "</p>" +
-  "<h4>Clue 2</h4>" +   
+  pTag.innerHTML = /*"<h4>Clue 1</h4>" + 
+  "<p>Native Name: " + country.nativeName +  "</p>" +*/
+  "<h4>Clue 1</h4>" +   
   "<p> Capital City: " + country.capital + "</p>" + 
-  "<h4>Clue 3</h4>" +  
+  "<h4>Clue 2</h4>" +  
   "<p> Sub-Region: " + country.subregion + "</p>";
   return pTag;
 }
