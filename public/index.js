@@ -11,7 +11,10 @@ var makePtag = function(country){
   return pTag;
 }
 
-var startGame = function(country){
+var startGame = function(countries){
+  var randomIndex = Math.floor(Math.random()*countries.length);
+  var country = countries[randomIndex];
+  console.log(country);
   map.centerAt(country.latlng[0], country.latlng[1]);
   var pTag = makePtag(country);
   var cluesDiv = document.querySelector("#clues")
@@ -30,10 +33,10 @@ var requestComplete = function(){
   if (this.status !== 200) return;
   var jsonString = this.responseText;
   var countries = JSON.parse(jsonString);
-  country = countries[0];
-  console.log(country);
+  // country = countries[0];
+  // console.log(country);
   // populateMarkers(countries);
-  startGame(country);
+  startGame(countries);
 }
 
 var makeRequest = function(url, callback){
